@@ -11,7 +11,7 @@ body {
   overflow-x: hidden;
 }
 
-.wrapper {
+.wrapper{
   width: 100vw;
   height: 100vh;
   background-color: #191c32;
@@ -26,6 +26,7 @@ margin-top: -7px;
   display: flex;
   justify-content: space-between;
   padding:2em ;
+ 
 }
 
 .menu {
@@ -103,6 +104,178 @@ span {
 /*estilos para la imagen 
 */
 .main img {
+  height: 500px;
   width: 350px;
   border:7px solid aqua;
+}
+/*
+estilos para el about me 
+*/
+.about {
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  width: 100vw;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  grid-column: 1/5;
+}
+
+.about-info{
+  grid-column: 5/10;
+padding: 3em;
+}
+
+.about-info h2 {
+  font-size: 2em;
+  color: #191c32;
+}
+
+.divider {
+  height: 4px;
+  width: 60px;
+  background-color:aqua;
+  margin-top: 5px;
+  margin-bottom: 2em;
+}
+
+.about p {
+  margin-bottom: 1em;
+}
+
+/*
+estilos para el porfolio
+*/
+
+
+.portfolio{
+  width: 100%;
+  background-color: #191c32;
+  color: white;
+}
+.portflio-headings {
+  width: 100%vh;
+  padding: 5em;
+
+}
+
+.portflio-headings h2 {
+  font-size: 2.5em;
+}
+
+.portfolio .container {
+  width: 1000px;
+  height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+
+.card {
+  
+ width: 100%;
+  height: 550px;
+ color: rgb(255, 255, 255);
+  background-color:#101e4b;
+  margin: 1em;
+
+
+
+}
+.card_img {
+  width: 100%;
+  height: 300px;
+  background-image: url(../img/ceciliooo2.2\ \(1\).png) ;
+  background-size: cover;
+}
+
+.card_title {
+  padding: 30px;
+}
+
+.card_projects-links {
+  display: flex;
+  justify-content:space-evenly ;
+}
+
+.card_projects-links a {
+  color:rgb(255, 255, 255);
+  text-decoration:none;
+
+}
+
+.card_projects-links i {
+font-size: 1.5em ;
+}
+
+.card  .projects-details {
+  margin: 0 auto;
+  margin: 1em;
+  width: 70%;
+  
+
+}
+.card .projects-details a {
+  text-decoration: none;
+  color: #191c32;
+  text-transform: uppercase;
+}
+
+.proyects-details-content{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+   margin-top: 1em;
+}
+
+/*
+estilos para el contac me 
+*/
+
+.contact-headings h2 {
+  font-size: 2em;
+
+}
+
+.container-contact {
+  padding: 3em;
+  margin-top:  1 auto;
+  display: flex;
+  align-items: center;
+}
+.container-contact img {
+  
+  width: 500px;
+  height: 600px;
+  bottom: 0px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  margin-top: 2em;
+
+}
+
+.form input {
+  color: aqua;
+  padding: 10px 20px;
+  margin-bottom: 1em;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+
+}
+
+.form textarea {
+  height: 150px;
+  background: none;
+  color: aqua;
+  padding: 1.5em;
+  border: 1px solid white;
+  
 }
