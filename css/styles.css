@@ -48,6 +48,12 @@ margin-top: -7px;
 padding: 10px 20px;
 border-radius: 35%;
 
+margin: 1em;
+border: none;
+text-transform: uppercase;
+background-color: rgb(10, 96, 105);
+border-radius: 20px;
+
 }
 
 .menu .active {
@@ -241,6 +247,8 @@ estilos para el contac me
 }
 
 .container-contact {
+ justify-content: center;
+ align-items: center;
   padding: 3em;
   margin-top:  1 auto;
   display: flex;
@@ -278,4 +286,65 @@ estilos para el contac me
   padding: 1.5em;
   border: 1px solid white;
   
+}
+.contact-form{
+  font-size: 2em;
+  color: rgba(255, 166, 0, 0.955);
+
+}
+.contact-form h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 1em;
+  border: none;
+  text-transform: uppercase;
+  background-color: rgb(10, 96, 105);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-submit {
+  padding: 10px 20px;
+  margin: 1em;
+  border: none;
+  text-transform: uppercase;
+  background-color: aqua;
+  border-radius: 20px;
+  cursor: pointer;
+
+}
+
+.btn-submit:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.footer {
+  color: #191c32;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100px;
+  background-color: aqua;
+}
+.footer-content {
+  font-size: 1em;
+}
+
+.footer-content h5{
+  font-size: 1em;
+}
+
+.social-network {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin-top: 1em;
+}
+
+.social-network i {
+  font-size: 1.5em;
 }
