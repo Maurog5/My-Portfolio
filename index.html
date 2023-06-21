@@ -14,202 +14,210 @@
 <body>
 
   <div class="wrapper">
-    <header>
-      <nav class="navbar">
-        <div class="brand" >
-          <h2>M<span>G </span></h2>
-
-        </div>
-        <ul class="menu">
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#" class="active">About</a></li>
-          <li><a href="#" class="active">Portafolio</a></li>
-          <li><a href="#" class="active">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
-      <div class="content">
-        <h1>I'm <span>Mauro</span> Gatica</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur laborum quibusdam laboriosam molestias aliquam recusandae labore similique enim hic eius veritatis impedit nostrum, assumenda sit! Exercitationem, voluptatum ducimus? Ipsum, assumenda!</p>
-        <a class = "link" download href="#">
-          <button class="download-cv" download=""> Download CV</a></button>
-           
-      </div>
-      <img src="./img/ceciliooo2.2 (1).png" alt="cecilio">
     
-     </main>
+    <div id="home">
+      <!-- Contenido de la sección "Home" -->
+      
+      
+      
+      
+      <header>
+        <nav class="navbar">
+          <div class="brand" >
+            <h2>M<span>G </span></h2>
+  
+          </div>
+          <ul class="menu">
+            <li><a href="#home">INICIO</a></li>
+            <li><a href="#about">sobre mi</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+  
+      <main class="main">
+        <div class="content">
+          <h1>Yo soy <span>Mauro</span> Gatica</h1>
+          <p>Hola, soy desarrollador full-stack apasionado por la tecnología. Enfocado en soluciones innovadoras y funcionales para aplicaciones web y móviles. Constantemente aprendiendo y buscando desafíos creativos.</p>
+          <a class="link" download href="./docs/cv mauro.pdf">
+            <button class="download-cv" download="">Download CV</button>
+          </a>
+        </div>
+        <div class="slider-container">
+          <div class="slider">
+            <img src="./img/ja.png" alt="cecilio">
+            <img src="./img/ht.png" alt="cecilio">
+            <img src="./img/css.png" alt="cecilio">
+            <img src="./img/nod.png" alt="cecilio">
+            <img src="./img/sql.png" alt="sql">
+            <img src="./img/react.png" alt="cecilio">
+            <img src="./img/sequalize.png" alt="cecilio">
+            <img src="./img/poistgre.png" alt="cecilio">
+            <img src="./img/mui.png" alt="cecilio">
+           
+            <!-- Agrega más imágenes según sea necesario -->
+          </div>
+        </div>
+      </main>
+      
 
-  </div>
+
+
+
+
+
+    </div>
 
   <!--Aca empieza la section del about je-->
 
- <div class="about">
-  <img src="./img/fotor_2023-4-2_16_45_48.jpeg" alt="Mauro-retrato">
-  
-  
-  <div class="about-info">
-    <h2>About me</h2>
-    <div class="divider"></div>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa, consequuntur. Explicabo, repudiandae ut ipsam non dolor expedita tenetur magnam molestias repellendus aut, delectus rerum atque ipsa nostrum impedit corrupti tempore.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, autem, enim in molestiae adipisci unde veniam pariatur consequuntur dolorum qui dolor aut! Quisquam, dolorem natus ut porro qui accusantium explicabo.</p>
-    <button class="download-cv">Read more
-      
-    </button>
+
+
+  <div id="about">
+    <!-- Contenido de la sección "About" -->
+
+
+
+
+
+
+    <div class="about">
+     <img src="./img/fotor_2023-4-2_16_45_48.jpeg" alt="Mauro-retrato">
+     
+     
+     <div class="about-info">
+       <h2>Sobre mi</h2>
+       <div class="divider"></div>
+       <p>Soy un apasionado desarrollador Full Stack que combina mi amor por las motos con mi pasión por la programación. Mi sólida formación en tecnologías de vanguardia y mi experiencia en el desarrollo web me permiten fusionar mi creatividad y habilidades técnicas para crear soluciones innovadoras.</p>
+       <p>Con conocimientos en JavaScript, React.js, Node.js, y más, disfruto explorar nuevas formas de optimizar el rendimiento y la experiencia del usuario, al igual que me gusta personalizar y ajustar mi moto para lograr un viaje perfecto. Tengo una mentalidad orientada al trabajo en equipo, excelentes habilidades de comunicación y una actitud proactiva para abordar desafíos y aprender constantemente en este emocionante mundo de la programación y las motos.</p>
+     
+       
+     </div>
+   </div>
+
+  </div>
+
+
+  <div id="portfolio">
+    <!-- Contenido de la sección "Portfolio" -->
+
     
-  </div>
-</div>
-
-<div class="portfolio">
-  <div class="portflio-headings">
-    <h2>My Portafolio</h2>
-    <div class="divider"></div>
-  </div>
-
-  <div class="container">
-    <div class="card">
-      <div class="card_img">
+    <div class="portfolio">
+      <div class="portflio-headings">
+        <h2>Mi Portafolio</h2>
+        <div class="divider"></div>
       </div>
-      <div class="card_title">
-        <h2>Projects Description</h2>
+    
+      <div  class="container">
+        <div  id = "card1" class="card">
+          <div class="card_img">
+          </div>
+          <div class="card_title">
+            <h2>Api-rest Countries</h2>
+          
+          </div>
+          <div class="card_projects-links">
+            <a href="https://github.com/Maurog5/Proyecto-countries" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            
+            <a href="https://front-maurog5.vercel.app/Countries" target="_blank">
+              <i class="fas fa-globe-americas"></i>
+            </a>
+    
+           
+            
+          </div>
+          <div class="proyects-details-content">
+            <h1>Tecnologias</h1>
+            <p>JAVASCRIPT, CSS, NODE, POSTGRESQL, SEQUALIZE</p>
+            <P>REACT, EXPRESS </P>
+           
+          </div>
+        </div>
+    
+        <div id = "card2" class="card">
+          <div class="card_img">
+          </div>
+          <div class="card_title">
+            <h2>Consumedic</h2>
+            
+          </div>
+          <div class="card_projects-links">
+            <a href="https://github.com/Maurog5/PF-soyhenry-Consumedic" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            
+            <a href="https://pf-soyhenry.vercel.app" target="_blank">
+              <i class="fas fa-globe-americas"></i>
+            </a>
+            
+          </div>
+          <div class="proyects-details-content">
+            <h1>Tecnologias</h1>
+            <p>JAVASCRIPT, CONTEX, MATERIAL-UI, NODE.JS, EXPRESS<P>
+              <p>REACT,SQL </p>
+          </div>
+        </div>
+    
+        
       
-      </div>
-      <div class="card_projects-links">
-        <a href="https://github.com/Maurog5" target="_blank">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        
-        <a href="proyecto" target="_blank">
-          <i class="fas fa-globe-americas"></i>
-        </a>
-
-        <a href="tecnologias" target="_blank" >
-          <i class="fa-solid fa-code"></i>
-        </a>
-        
-      </div>
-      <div class="proyects-details-content">
-        <button class="projects-details download-cv">
-          <a href="">
-            Project details
-          </a>
-         </button>
-
-      </div>
     </div>
 
-    <div class="card">
-      <div class="card_img">
+  </div>
+
+  <div id="contact">
+    <!-- Contenido de la sección "Contact" -->
+    
+      <div class="contact-section">
+      <div class="contact-headings">
+        <h2> Contactame</h2>
+        <div class="divider"></div>
       </div>
-      <div class="card_title">
-        <h2>Projects Description</h2>
-        
+    
+      
+        <div class="container-contact">
+       
+    
+        <div class="contact-form">
+          <h4>HABLEMOS</h4>
+    
+         <form action="https://formsubmit.co/maurogatica015@gmail.com" method="POST"class="form">
+    
+    
+    
+    
+      <input type="text"  name = "name " placeholder="Nombre">
+    
+    
+    
+    
+      <input type="email" name = "email " placeholder="Email">
+    
+    
+    
+    
+      
+      <textarea placeholder="Place your message here..."> 
+    
+      </textarea>
+    
+      
+          <button  class="btn-submit">
+            Enviar mensaje
+          </button>
+         </form>
+        </div>
+    
+        </div>
       </div>
-      <div class="card_projects-links">
-        <a href="https://github.com/Maurog5" target="_blank">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        
-        <a href="proyecto" target="_blank">
-          <i class="fas fa-globe-americas"></i>
-        </a>
-
-        <a href="tecnologias" target="_blank" >
-          <i class="fa-solid fa-code"></i>
-        </a>
-        
-      </div>
-      <div class="proyects-details-content">
-        <button class="projects-details download-cv">
-          <a href="">
-            Project details
-          </a>
-         </button>
-
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card_img">
-      </div>
-      <div class="card_title">
-        <h2>Projects Description</h2>
-        
-      </div>
-      <div class="card_projects-links">
-        <a href="https://github.com/Maurog5" target="_blank">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        
-        <a href="proyecto" target="_blank">
-          <i class="fas fa-globe-americas"></i>
-        </a>
-
-        <a href="tecnologias" target="_blank" >
-          <i class="fa-solid fa-code"></i>
-        </a>
-        
-      </div>
-      <div class="proyects-details-content">
-        <button class="projects-details download-cv">
-          <a href="">
-            Project details
-          </a>
-         </button>
-
-      </div>
-    </div>
 
 
 
-   
 
-  
-</div>
-
-  <div class="contact-section">
-  <div class="contact-headings">
-    <h2>Contact me</h2>
-    <div class="divider"></div>
   </div>
 
   
-    <div class="container-contact">
-   
-
-    <div class="contact-form">
-      <h4>HABLEMOS</h4>
-
-     <form action="https://formsubmit.co/maurogatica015@gmail.com" method="POST"class="form">
-
-
-
-
-  <input type="text"  name = "name " placeholder="Name">
-
-
-
-
-  <input type="email" name = "email " placeholder="Email">
-
-
-
-
-  
-  <textarea placeholder="Place your message here..."> 
-
-  </textarea>
-
-  
-      <button  class="btn-submit">
-        Send message
-      </button>
-     </form>
-    </div>
-
-    </div>
-  </div>
 
   <!-- Calendly inline widget begin -->
 <div class="calendly-inline-widget" data-url="https://calendly.com/maurogatica015-entrevistas/reuniones" style="min-width:320px;height:700px;"></div>
@@ -224,12 +232,15 @@
   </div>
 
   <div class="social-network">
-
-    <i class="fab fa-facebook"></i>
-
-    <i class="fab fa-linkedin"></i>
-
-    <i class="fa-brands fa-github"></i>
+    <a href="https://www.facebook.com/DamianGatica0/" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/mauro-gatica-a5aba3163/" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/Maurog5" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
   </div>
 
 </footer>

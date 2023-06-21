@@ -9,13 +9,19 @@
 body {
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+
 }
 
 .wrapper{
   width: 100vw;
   height: 100vh;
-  background-color: #191c32;
+  background-image: url(https://i.pinimg.com/originals/64/a0/c7/64a0c7e67e94e682e8ea78ffc5cbab0f.gif);
   color: white;
+  background-size: cover;
+  background-position: center;
+
 }
 .brand {
 margin-top: -7px;
@@ -25,14 +31,14 @@ margin-top: -7px;
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding:2em ;
- 
+  align-items: center;
+  padding: 10px 20px;
 }
 
 .menu {
   display: flex;
-  width: 50%;
-  justify-content: space-around;
+  width: 60%;
+  justify-content:space-between;
 }
 
 
@@ -43,7 +49,7 @@ margin-top: -7px;
 
 
 .menu a {
-  color:white;
+  color:rgb(0, 0, 0);
   text-decoration: none;
 padding: 10px 20px;
 border-radius: 35%;
@@ -51,18 +57,18 @@ border-radius: 35%;
 margin: 1em;
 border: none;
 text-transform: uppercase;
-background-color: rgb(10, 96, 105);
+background-color:#94ba65;
 border-radius: 20px;
 
 }
 
 .menu .active {
-  color: aqua;
+  color: #ffffff;
 
 }
 
 .menu a:hover{
-  background-color:aqua;
+  background-color:#9D2CEE;
   color: #191c32;
   transition: ease-in.3s ;
 }
@@ -88,11 +94,19 @@ h1 {
   color:blueviolet
 }
 span {
-  color:aqua
+  color:#94ba65;
 }
+
+
+.content p {
+  color: #fff9f9;
+  font-size: 1.5em; /* Puedes ajustar el color según tu preferencia */
+}
+
+
 .download-cv {
   padding: 10px 20px ;
-  background-color:aqua;
+  background-color:#94ba65;
   border: none;
   border-radius: 20px;
   margin-top:10px;
@@ -110,14 +124,16 @@ span {
 /*estilos para la imagen 
 */
 .main img {
-  height: 500px;
+  height: 300px;
   width: 350px;
-  border:7px solid aqua;
+  border-radius: 40%;
+  border:7px solid purple;
 }
 /*
 estilos para el about me 
 */
 .about {
+  background-color:#191c32;
   display: grid;
   grid-template-columns: repeat(10,1fr);
   width: 100vw;
@@ -125,24 +141,30 @@ estilos para el about me
 }
 
 .about img {
+  margin-top: 75px;
   width: 100%;
   grid-column: 1/5;
 }
 
 .about-info{
+  color: rgb(255, 255, 255);
   grid-column: 5/10;
 padding: 3em;
 }
 
 .about-info h2 {
   font-size: 2em;
-  color: #191c32;
+  color: #ffffff;
+}
+.about-info p {
+  font-size: 1em;
+
 }
 
 .divider {
   height: 4px;
   width: 60px;
-  background-color:aqua;
+  background-color:#42f2f2;
   margin-top: 5px;
   margin-bottom: 2em;
 }
@@ -194,8 +216,27 @@ estilos para el porfolio
 .card_img {
   width: 100%;
   height: 300px;
-  background-image: url(../img/ceciliooo2.2\ \(1\).png) ;
+  background-image: url(../img/pc.png) ;
   background-size: cover;
+}
+
+#card1 {
+  width: 100%;
+  height: 300px;
+  margin-top: 0 auto;
+  background-image: url(../img/gifCountries.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#card2 {
+  width: 100%;
+  height: 300px;
+  margin-top: 0 auto;
+  background-image: url(../img/Consumedic.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card_title {
@@ -240,9 +281,14 @@ font-size: 1.5em ;
 /*
 estilos para el contac me 
 */
+.contact-section{
+  background-color: #191c32;
+  
+}
 
 .contact-headings h2 {
-  font-size: 2em;
+  padding: 30px;
+  font-size: 2.5em;
 
 }
 
@@ -289,7 +335,7 @@ estilos para el contac me
 }
 .contact-form{
   font-size: 2em;
-  color: rgba(255, 166, 0, 0.955);
+  color: #2890b3;
 
 }
 .contact-form h4 {
@@ -300,9 +346,9 @@ estilos para el contac me
   margin: 1em;
   border: none;
   text-transform: uppercase;
-  background-color: rgb(10, 96, 105);
+  background-color: #ffffff;
   border-radius: 20px;
-  cursor: pointer;
+
 }
 
 .btn-submit {
@@ -310,7 +356,7 @@ estilos para el contac me
   margin: 1em;
   border: none;
   text-transform: uppercase;
-  background-color: aqua;
+  background-color: #42f2f2;
   border-radius: 20px;
   cursor: pointer;
 
@@ -321,14 +367,14 @@ estilos para el contac me
 }
 
 .footer {
-  color: #191c32;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100px;
-  background-color: aqua;
+  background-color: #191c32;
 }
 .footer-content {
   font-size: 1em;
@@ -343,8 +389,53 @@ estilos para el contac me
   justify-content: space-between;
   width: 200px;
   margin-top: 1em;
+  
+
 }
 
 .social-network i {
   font-size: 1.5em;
+  text-decoration: none;
+  color: #ffffff;
 }
+
+.main {
+  overflow: hidden;
+}
+
+.slider-container {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+}
+
+.slider {
+  display: inline-flex;
+}
+
+.slider img {
+  margin-top: auto;
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+}
+
+.calendly-inline-widget {
+  background-color:#191c32;
+}
+
+.proyects-details-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proyects-details-content p {
+  margin-top: 10px;
+}
+
+
+/*
+verde #94ba65
+azul #2b4e72
+*/
