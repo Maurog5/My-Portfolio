@@ -17,14 +17,14 @@ body {
 .wrapper{
   width: 100vw;
   height: 100vh;
-  background-image: url(https://i.pinimg.com/originals/64/a0/c7/64a0c7e67e94e682e8ea78ffc5cbab0f.gif);
-  color: white;
+  background-color:#191c32;
   background-size: cover;
   background-position: center;
 
 }
 .brand {
 margin-top: -7px;
+color: #94ba65;
 }
 
 
@@ -69,7 +69,7 @@ border-radius: 20px;
 
 .menu a:hover{
   background-color:#9D2CEE;
-  color: #191c32;
+  color: #20bc5c;
   transition: ease-in.3s ;
 }
 
@@ -117,7 +117,7 @@ span {
 
 }
 .link {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -127,7 +127,7 @@ span {
   height: 300px;
   width: 350px;
   border-radius: 40%;
-  border:7px solid purple;
+  border:7px solid #18d23d;
 }
 /*
 estilos para el about me 
@@ -141,9 +141,11 @@ estilos para el about me
 }
 
 .about img {
+
   margin-top: 75px;
   width: 100%;
   grid-column: 1/5;
+  border: 7px solid rgb(255, 255, 255);
 }
 
 .about-info{
@@ -283,14 +285,19 @@ estilos para el contac me
 */
 .contact-section{
   background-color: #191c32;
+  width: 100%vh;
+  padding: 5em;
   
 }
 
 .contact-headings h2 {
-  padding: 30px;
+  color: #fff9f9;
+
   font-size: 2.5em;
 
 }
+
+
 
 .container-contact {
  justify-content: center;
@@ -403,22 +410,55 @@ estilos para el contac me
   overflow: hidden;
 }
 
+
 .slider-container {
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  white-space: nowrap;
+  overflow: hidden;
 }
 
 .slider {
-  display: inline-flex;
+  display: flex;
+  animation: carousel 20s linear infinite;
+  width: 80%; /* Ajusta el ancho del carrusel según tus necesidades */
+  height: 400px; /* Ajusta la altura del carrusel según tus necesidades */
+  position: relative;
+  margin: 0 auto;
 }
 
 .slider img {
-  margin-top: auto;
-  width: 20%;
-  height: auto;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 0.7; /* Ajusta la opacidad de las imágenes según tus necesidades */
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
+
+@keyframes carousel {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilos adicionales para posicionar las imágenes en forma de círculo */
+.slider img:nth-child(1) { transform: translate(-85%, -150%) rotate(0deg); }
+.slider img:nth-child(2) { transform: translate(30%, -185%) rotate(40deg); }
+.slider img:nth-child(3) { transform: translate(130%, -115%) rotate(80deg); }
+.slider img:nth-child(4) { transform: translate(185%, -10%) rotate(120deg); }
+.slider img:nth-child(5) { transform: translate(130%, 90%) rotate(160deg); }
+.slider img:nth-child(6) { transform: translate(30%, 150%) rotate(200deg); }
+.slider img:nth-child(7) { transform: translate(-90%, 140%) rotate(240deg); }
+.slider img:nth-child(8) { transform: translate(-160%, 45%) rotate(280deg); }
+.slider img:nth-child(9) { transform: translate(-170%, -70%) rotate(320deg); }
+
+
 
 .calendly-inline-widget {
   background-color:#191c32;

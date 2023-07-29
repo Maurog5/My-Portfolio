@@ -46,27 +46,23 @@
         </div>
         <div class="slider-container">
           <div class="slider">
-            <img src="./img/ja.png" alt="cecilio">
-            <img src="./img/ht.png" alt="cecilio">
-            <img src="./img/css.png" alt="cecilio">
-            <img src="./img/nod.png" alt="cecilio">
+            <img src="./img/ja.png" alt="javascript">
+            <img src="./img/ht.png" alt="html">
+            <img src="./img/css.png" alt="css">
+            <img src="./img/nod.png" alt="node">
             <img src="./img/sql.png" alt="sql">
-            <img src="./img/react.png" alt="cecilio">
-            <img src="./img/sequalize.png" alt="cecilio">
-            <img src="./img/poistgre.png" alt="cecilio">
-            <img src="./img/mui.png" alt="cecilio">
+            <img src="./img/react.png" alt="react">
+            <img src="./img/sequalize.png" alt="sequialize">
+            <img src="./img/poistgre.png" alt="postgre">
+            <img src="./img/mui.png" alt="mui">
            
             <!-- Agrega más imágenes según sea necesario -->
+           
           </div>
         </div>
+        
       </main>
       
-
-
-
-
-
-
     </div>
 
   <!--Aca empieza la section del about je-->
@@ -88,8 +84,8 @@
      <div class="about-info">
        <h2>Sobre mi</h2>
        <div class="divider"></div>
-       <p>Soy un apasionado desarrollador Full Stack que combina mi amor por las motos con mi pasión por la programación. Mi sólida formación en tecnologías de vanguardia y mi experiencia en el desarrollo web me permiten fusionar mi creatividad y habilidades técnicas para crear soluciones innovadoras.</p>
-       <p>Con conocimientos en JavaScript, React.js, Node.js, y más, disfruto explorar nuevas formas de optimizar el rendimiento y la experiencia del usuario, al igual que me gusta personalizar y ajustar mi moto para lograr un viaje perfecto. Tengo una mentalidad orientada al trabajo en equipo, excelentes habilidades de comunicación y una actitud proactiva para abordar desafíos y aprender constantemente en este emocionante mundo de la programación y las motos.</p>
+       <p>Soy un apasionado desarrollador Full Stack, mi sólida formación y mi experiencia en el desarrollo web me permiten fusionar mi creatividad y habilidades técnicas para crear soluciones innovadoras.</p>
+       <p>Con conocimientos en JavaScript, React.js, Node.js, Express , SQL, Postgres, HTML Y CSS </p>
      
        
      </div>
@@ -166,53 +162,126 @@
 
   </div>
 
+
+
+  <script>
+    // Función para calcular el hash SHA-256 de los datos del formulario
+    async function calcularHash(data) {
+      const encoder = new TextEncoder();
+      const dataUint8Array = encoder.encode(JSON.stringify(data));
+      const hashBuffer = await crypto.subtle.digest('SHA-256', dataUint8Array);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+      return hashHex;
+    }
+
+    // Función para validar el formulario
+    async function validar() {
+      var form = document.querySelector(".form");
+      var nombre = form.nombre.value.trim();
+      var email = form.email.value.trim(); // Agregamos esta línea para obtener el valor del campo de correo electrónico
+      var message = form.message.value.trim(); // Agregamos esta línea para obtener el valor del campo de textarea
+
+      // Realizar la validación de los campos como antes...
+
+      // Generar el hash de los datos del formulario al cargar la página
+      var datosIniciales = {
+        nombre: nombre,
+        email: email,
+        message: message
+      };
+      var hashInicial = await calcularHash(datosIniciales);
+
+      // Calcular el nuevo hash de los datos al enviar el formulario
+      var datosEnviados = {
+        nombre: form.nombre.value.trim(),
+        email: form.email.value.trim(),
+        message: form.message.value.trim()
+      };
+      var nuevoHash = await calcularHash(datosEnviados);
+
+      // Comparar los hashes y evitar el envío si los datos fueron manipulados
+      if (nuevoHash !== hashInicial) {
+        alert("Los datos del formulario han sido manipulados. No se enviará el formulario.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+
   <div id="contact">
     <!-- Contenido de la sección "Contact" -->
-    
-      <div class="contact-section">
+    <div class="contact-section">
       <div class="contact-headings">
-        <h2> Contactame</h2>
+        <h2>Contactame</h2>
         <div class="divider"></div>
       </div>
-    
-      
-        <div class="container-contact">
-       
-    
+  
+      <div class="container-contact">
         <div class="contact-form">
           <h4>HABLEMOS</h4>
-    
-         <form action="https://formsubmit.co/maurogatica015@gmail.com" method="POST"class="form">
-    
-    
-    
-    
-      <input type="text"  name = "name " placeholder="Nombre">
-    
-    
-    
-    
-      <input type="email" name = "email " placeholder="Email">
-    
-    
-    
-    
-      
-      <textarea placeholder="Place your message here..."> 
-    
-      </textarea>
-    
-      
-          <button  class="btn-submit">
-            Enviar mensaje
-          </button>
-         </form>
-        </div>
-    
+          <form action="https://formsubmit.co/maurogatica015@gmail.com" method="POST" class="form" onsubmit="return validar();">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <span id="error-nombre"></span>
+  
+            <input type="email" name="email" placeholder="Email">
+            <span id="error-email"></span>
+  
+            <textarea name="message" placeholder="Deposite su mensaje aqui..."></textarea>
+            <span id="error-message"></span>
+  
+            <button type="submit" class="btn-submit">Enviar mensaje</button>
+          </form>
         </div>
       </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript">
+    function validar() {
+      var form = document.querySelector(".form");
+      var nombre = form.nombre.value.trim();
+      var email = form.email.value.trim(); // Agregamos esta línea para obtener el valor del campo de correo electrónico
+      var message = form.message.value.trim(); // Agregamos esta línea para obtener el valor del campo de textarea
+  
+      if (nombre === "") {
+        document.getElementById("error-nombre").textContent = "El campo nombre está vacío";
+        form.nombre.focus();
+        return false;
+      } else {
+        document.getElementById("error-nombre").textContent = "";
+      }
+  
+      if (email === "") {
+        document.getElementById("error-email").textContent = "El campo email está vacío";
+        form.email.focus();
+        return false;
+      } else {
+        document.getElementById("error-email").textContent = "";
+      }
 
+      if (message === "") {
+      document.getElementById("error-message").textContent = "El campo mensaje está vacío";
+      form.message.focus();
+      return false;
+    } else {
+      document.getElementById("error-message").textContent = "";
+    }
 
+     // Validar que el campo de textarea contenga solo texto
+     var regex = /^[A-Za-z\s]+$/; // Expresión regular para permitir solo letras (mayúsculas o minúsculas) y espacios
+
+    if (!regex.test(message)) {
+     document.getElementById("error-message").textContent = "El campo mensaje debe contener solo texto";
+       form.message.focus();
+     return false;
+    } else {
+     document.getElementById("error-message").textContent = "";
+      }
+    }
+  </script>
+  
 
 
   </div>
